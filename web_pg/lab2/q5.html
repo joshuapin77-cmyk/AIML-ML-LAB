@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feature Selection</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .feature-card-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.feature-card {
+  padding: 15px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+
+.feature-card input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #444;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.feature-card input[type="checkbox"]:checked {
+  background: #0077cc;
+  border-color: #0077cc;
+}
+
+.feature-card input[type="checkbox"]:checked::after {
+  content: "✓";
+  color: white;
+  display: block;
+  text-align: center;
+  line-height: 18px;
+}
+
+  </style>
+</head>
+<body>
+
+<h1>Feature Selection</h1>
+
+<div class="feature-card-container">
+  <label class="feature-card">
+    <input type="checkbox"> Dark Mode
+  </label>
+
+  <label class="feature-card">
+    <input type="checkbox"> Notifications
+  </label>
+</div>
+
+</body>
+</html>

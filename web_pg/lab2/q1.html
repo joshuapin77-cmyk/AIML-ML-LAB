@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Business Card</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Global styles */
+body {
+  background-color: rosybrown;
+  font-family: Arial, sans-serif;
+}
+
+/* Business card container */
+.business-card {
+  width: 300px;
+  background-color: #fff7f4;
+  padding: 20px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Profile image */
+.profile-image {
+  max-width: 100%;
+  border-radius: 50%;
+  border: 4px solid #e0b4b4;
+  margin-bottom: 10px;
+}
+
+/* Text spacing */
+p {
+  margin: 5px 0;
+}
+
+/* Name emphasis */
+.full-name {
+  font-weight: bold;
+  font-size: 18px;
+  color: #3a2d2d;
+}
+
+/* Role & company */
+.designation {
+  color: #7a4a4a;
+  font-style: italic;
+}
+
+.company {
+  color: #9b5f5f;
+  font-weight: 600;
+}
+
+/* Horizontal rules */
+hr {
+  border: none;
+  height: 1px;
+  background-color: #e3c3c3;
+  margin: 15px 0;
+}
+
+/* Links (no underline as required) */
+a {
+  text-decoration: none;
+  color: #7a2e2e;
+  font-weight: 600;
+}
+
+/* Portfolio link */
+.portfolio-link {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background-color: #7a2e2e;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.portfolio-link:hover {
+  background-color: #5c1f1f;
+  transform: translateY(-2px);
+}
+
+/* Social media section */
+.social-media {
+  margin-top: 10px;
+}
+
+.social-media h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #3a2d2d;
+}
+
+.social-media a {
+  display: inline-block;
+  margin: 0 6px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-media a:hover {
+  background-color: #f1dcdc;
+  color: #5c1f1f;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="business-card">
+    <img class="profile-image"
+         src="data:image/jpeg;base64,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"
+         alt="Profile picture of a flower" height="150px">
+
+    <p class="full-name">Anthony Rodrigues</p>
+    <p class="designation">AI Engineer</p>
+    <p class="company">Keeper.ai</p>
+
+    <hr>
+
+    <p>anthonyrodrigues443@gmail.com</p>
+    <p>+1 234 567 8900</p>
+
+    <a class="portfolio-link" href="https://example.com">Portfolio</a>
+
+    <hr>
+
+    <div class="social-media">
+      <h2>Connect with me</h2>
+      <a href="https://twitter.com">Twitter</a>
+      <a href="https://linkedin.com">LinkedIn</a>
+      <a href="https://github.com">GitHub</a>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
