@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Navigation Bar - Fixed on the left */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    background: linear-gradient(180deg, #2c3e50 0%, #34495e 100%);
+    overflow-y: auto;
+    border-right: 3px solid #3498db;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#navbar header {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ecf0f1;
+    padding: 30px 20px;
+    text-align: center;
+    background: #1a252f;
+    border-bottom: 2px solid #3498db;
+    margin-bottom: 10px;
+}
+
+.nav-link {
+    display: block;
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.nav-link:hover {
+    background: #34495e;
+    border-left: 4px solid #3498db;
+    padding-left: 30px;
+    color: #3498db;
+}
+
+.nav-link:active {
+    background: #1a252f;
+}
+
+/* Main Documentation Content */
+#main-doc {
+    margin-left: 280px;
+    padding: 40px 60px;
+    max-width: 1200px;
+}
+
+.main-section {
+    margin-bottom: 60px;
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-section header {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #3498db;
+    font-weight: 600;
+}
+
+.main-section p {
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+    color: #555;
+    text-align: justify;
+}
+
+.main-section code {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-left: 4px solid #3498db;
+    padding: 15px 20px;
+    display: block;
+    margin: 20px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+    color: #c7254e;
+    border-radius: 4px;
+    overflow-x: auto;
+    white-space: pre;
+    line-height: 1.5;
+}
+
+.main-section ul {
+    margin: 20px 0;
+    padding-left: 40px;
+}
+
+.main-section li {
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.main-section li code {
+    display: inline;
+    padding: 3px 8px;
+    margin: 0 3px;
+    border: none;
+    border-left: none;
+    font-size: 0.9rem;
+    background: #e8f4f8;
+    color: #2c3e50;
+}
+
+.main-section strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Scrollbar styling for navbar */
+#navbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+#navbar::-webkit-scrollbar-track {
+    background: #2c3e50;
+}
+
+#navbar::-webkit-scrollbar-thumb {
+    background: #3498db;
+    border-radius: 4px;
+}
+
+#navbar::-webkit-scrollbar-thumb:hover {
+    background: #2980b9;
+}
+
+/* Media Query for tablets and smaller devices */
+@media (max-width: 1024px) {
+    #navbar {
+        width: 240px;
+    }
+
+    #main-doc {
+        margin-left: 240px;
+        padding: 30px 40px;
+    }
+
+    .main-section {
+        padding: 30px;
+    }
+
+    .main-section header {
+        font-size: 1.9rem;
+    }
+}
+
+/* Media Query for mobile devices */
+@media (max-width: 768px) {
+    #navbar {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 3px solid #3498db;
+    }
+
+    #navbar header {
+        font-size: 1.5rem;
+        padding: 20px 15px;
+    }
+
+    .nav-link {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+
+    .nav-link:hover {
+        padding-left: 25px;
+    }
+
+    #main-doc {
+        margin-left: 0;
+        padding: 20px 15px;
+    }
+
+    .main-section {
+        padding: 25px 20px;
+        margin-bottom: 30px;
+    }
+
+    .main-section header {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .main-section p,
+    .main-section li {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .main-section code {
+        padding: 12px 15px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Media Query for very small devices */
+@media (max-width: 480px) {
+    #navbar header {
+        font-size: 1.3rem;
+        padding: 15px 10px;
+    }
+
+    .nav-link {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    #main-doc {
+        padding: 15px 10px;
+    }
+
+    .main-section {
+        padding: 20px 15px;
+    }
+
+    .main-section header {
+        font-size: 1.4rem;
+    }
+
+    .main-section p,
+    .main-section li {
+        font-size: 0.95rem;
+    }
+
+    .main-section ul {
+        padding-left: 25px;
+    }
+}
