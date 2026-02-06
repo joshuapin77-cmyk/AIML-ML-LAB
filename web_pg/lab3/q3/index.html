@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Documentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <header>C++ Documentation</header>
+        <a href="#Introduction" class="nav-link">Introduction</a>
+        <a href="#Getting_Started" class="nav-link">Getting Started</a>
+        <a href="#Variables_and_Data_Types" class="nav-link">Variables and Data Types</a>
+        <a href="#Control_Flow" class="nav-link">Control Flow</a>
+        <a href="#Functions" class="nav-link">Functions</a>
+        <a href="#Classes_and_Objects" class="nav-link">Classes and Objects</a>
+    </nav>
+
+    <!-- Main Documentation -->
+    <main id="main-doc">
+        <!-- Section 1: Introduction -->
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>C++ is a powerful, high-performance programming language that was developed by Bjarne Stroustrup at Bell Labs in 1979 as an extension of the C programming language. It combines the efficiency and control of low-level programming with high-level features like object-oriented programming.</p>
+            <p>C++ is one of the most widely used programming languages in the world, particularly in systems programming, game development, embedded systems, and performance-critical applications where speed and resource efficiency are crucial.</p>
+            <p>The language supports multiple programming paradigms including procedural, object-oriented, and generic programming. C++ gives programmers fine-grained control over system resources and memory, making it ideal for applications where performance is critical.</p>
+            <code>#include &lt;iostream&gt;
+
+int main() {
+    std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;
+    return 0;
+}</code>
+            <p>This classic example demonstrates a basic C++ program. The language is used in operating systems, web browsers, databases, game engines, and many other applications that require high performance and efficient resource management.</p>
+        </section>
+
+        <!-- Section 2: Getting Started -->
+        <section class="main-section" id="Getting_Started">
+            <header>Getting Started</header>
+            <p>To start programming in C++, you need a C++ compiler. Popular choices include GCC (GNU Compiler Collection), Clang, and Microsoft Visual C++. Many integrated development environments (IDEs) come with compilers built-in.</p>
+            <p>To compile a C++ program from the command line using GCC, save your code in a file with a .cpp extension and use:</p>
+            <code>g++ program.cpp -o program</code>
+            <p>This compiles your source code and creates an executable. To run the program:</p>
+            <code>./program</code>
+            <p>There are several ways to write and compile C++ code:</p>
+            <ul>
+                <li>Command-line compilers like GCC or Clang</li>
+                <li>IDEs such as Visual Studio, CLion, Code::Blocks, or Eclipse</li>
+                <li>Online compilers for quick testing and learning</li>
+                <li>Text editors with compiler integration like VS Code with C++ extensions</li>
+            </ul>
+        </section>
+
+        <!-- Section 3: Variables and Data Types -->
+        <section class="main-section" id="Variables_and_Data_Types">
+            <header>Variables and Data Types</header>
+            <p>In C++, variables must be declared with their data type before use. C++ is a statically-typed language, meaning the type of a variable is determined at compile time and cannot change.</p>
+            <code>int age = 25;
+double price = 19.99;
+char grade = 'A';
+bool isActive = true;
+std::string name = "John";</code>
+            <p>C++ has several fundamental data types:</p>
+            <ul>
+                <li><strong>int:</strong> Integer numbers (e.g., -10, 0, 42)</li>
+                <li><strong>double/float:</strong> Floating-point numbers (e.g., 3.14, -0.001)</li>
+                <li><strong>char:</strong> Single characters (e.g., 'a', 'Z', '5')</li>
+                <li><strong>bool:</strong> Boolean values (true or false)</li>
+                <li><strong>string:</strong> Sequences of characters (requires &lt;string&gt; header)</li>
+            </ul>
+            <p>You can declare constants using the <code>const</code> keyword to prevent modification:</p>
+            <code>const double PI = 3.14159;
+const int MAX_SIZE = 100;</code>
+        </section>
+
+        <!-- Section 4: Control Flow -->
+        <section class="main-section" id="Control_Flow">
+            <header>Control Flow</header>
+            <p>Control flow statements in C++ allow you to control the execution path of your program based on conditions or repeat code blocks.</p>
+            <p>The <strong>if-else statement</strong> allows conditional execution:</p>
+            <code>int x = 10;
+if (x > 0) {
+    std::cout &lt;&lt; "Positive" &lt;&lt; std::endl;
+} else if (x &lt; 0) {
+    std::cout &lt;&lt; "Negative" &lt;&lt; std::endl;
+} else {
+    std::cout &lt;&lt; "Zero" &lt;&lt; std::endl;
+}</code>
+            <p>The <strong>for loop</strong> is commonly used for iterating a specific number of times:</p>
+            <code>for (int i = 0; i &lt; 5; i++) {
+    std::cout &lt;&lt; i &lt;&lt; std::endl;
+}</code>
+            <p>The <strong>while loop</strong> continues executing while a condition remains true:</p>
+            <code>int count = 0;
+while (count &lt; 5) {
+    std::cout &lt;&lt; count &lt;&lt; std::endl;
+    count++;
+}</code>
+            <p>C++ also provides the <strong>switch statement</strong> for multi-way branching based on a variable's value, which can be more efficient than multiple if-else statements.</p>
+        </section>
+
+        <!-- Section 5: Functions -->
+        <section class="main-section" id="Functions">
+            <header>Functions</header>
+            <p>Functions in C++ are blocks of code that perform specific tasks. They must be declared with a return type, name, and parameters (if any).</p>
+            <p>A basic function declaration and definition looks like this:</p>
+            <code>int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int result = add(5, 3);
+    std::cout &lt;&lt; result &lt;&lt; std::endl;  // Output: 8
+    return 0;
+}</code>
+            <p>Functions can have different return types. A function that doesn't return a value uses the <code>void</code> return type:</p>
+            <code>void greet(std::string name) {
+    std::cout &lt;&lt; "Hello, " &lt;&lt; name &lt;&lt; "!" &lt;&lt; std::endl;
+}</code>
+            <p>C++ supports function overloading, allowing multiple functions with the same name but different parameters:</p>
+            <code>int multiply(int a, int b) {
+    return a * b;
+}
+
+double multiply(double a, double b) {
+    return a * b;
+}</code>
+            <p>You can also pass parameters by reference using the <code>&</code> symbol, allowing functions to modify the original variables.</p>
+        </section>
+
+        <!-- Section 6: Classes and Objects -->
+        <section class="main-section" id="Classes_and_Objects">
+            <header>Classes and Objects</header>
+            <p>Classes are the foundation of object-oriented programming in C++. A class is a blueprint for creating objects that encapsulate data and functions together.</p>
+            <p>Here's a simple class definition:</p>
+            <code>class Rectangle {
+private:
+    int width;
+    int height;
+
+public:
+    Rectangle(int w, int h) {
+        width = w;
+        height = h;
+    }
+
+    int area() {
+        return width * height;
+    }
+};</code>
+            <p>To create and use an object from this class:</p>
+            <code>int main() {
+    Rectangle rect(5, 10);
+    std::cout &lt;&lt; "Area: " &lt;&lt; rect.area() &lt;&lt; std::endl;
+    return 0;
+}</code>
+            <p>Classes support key object-oriented programming concepts:</p>
+            <ul>
+                <li><strong>Encapsulation:</strong> Hiding internal data using private members</li>
+                <li><strong>Inheritance:</strong> Creating new classes based on existing ones</li>
+                <li><strong>Polymorphism:</strong> Objects of different types responding to the same method call</li>
+                <li><strong>Abstraction:</strong> Simplifying complex systems by modeling classes</li>
+            </ul>
+            <p>Constructors initialize objects when they're created, and destructors clean up when objects are destroyed. This makes C++ powerful for managing resources efficiently.</p>
+        </section>
+    </main>
+</body>
+</html>

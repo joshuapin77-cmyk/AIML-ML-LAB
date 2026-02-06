@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 3px;
+}
+
+/* Main playing cards container */
+#playing-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual card styling */
+.card {
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+    height: 260px;
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-15px) rotate(2deg);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Left section - top corner */
+.left {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Middle section - center of card */
+.middle {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Right section - bottom corner (rotated) */
+.right {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    transform: rotate(180deg);
+}
+
+/* Rank and suit styling */
+.rank {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.suit {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.suit-large {
+    font-size: 6rem;
+    line-height: 1;
+    opacity: 0.9;
+}
+
+/* Color styling for different suits */
+.hearts .rank,
+.hearts .suit,
+.hearts .suit-large,
+.diamonds .rank,
+.diamonds .suit,
+.diamonds .suit-large {
+    color: #e74c3c;
+}
+
+.spades .rank,
+.spades .suit,
+.spades .suit-large,
+.clubs .rank,
+.clubs .suit,
+.clubs .suit-large {
+    color: #2c3e50;
+}
+
+/* Card border for premium look */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 2px solid rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        width: 150px;
+        height: 220px;
+    }
+
+    .rank {
+        font-size: 1.5rem;
+    }
+
+    .suit {
+        font-size: 1.2rem;
+    }
+
+    .suit-large {
+        font-size: 4.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 130px;
+        height: 190px;
+        padding: 12px;
+    }
+
+    .rank {
+        font-size: 1.3rem;
+    }
+
+    .suit {
+        font-size: 1rem;
+    }
+
+    .suit-large {
+        font-size: 3.5rem;
+    }
+}
