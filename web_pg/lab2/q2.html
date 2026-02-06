@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* To-do list container */
+.todo-list {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 20px;
+  list-style: none;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Main list items */
+.todo-list > li {
+  margin-bottom: 20px;
+}
+
+/* Checkbox spacing */
+.todo-list input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Labels */
+.todo-list label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Sub-item list */
+.sub-item {
+  margin-top: 8px;
+  margin-left: 30px;
+  list-style: none;
+}
+
+/* Sub-item link base style */
+.sub-item-link {
+  text-decoration: none;              /* required */
+  color: #0066cc;                     /* unvisited */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Visited link */
+.sub-item-link:visited {
+  color: #663399;
+}
+
+/* Hovered link */
+.sub-item-link:hover {
+  color: #cc5500;
+}
+
+/* Active (clicked) link */
+.sub-item-link:active {
+  color: #cc0000;
+}
+
+/* Focused link (keyboard navigation) */
+.sub-item-link:focus {
+  outline: 3px solid #ffb703;
+  outline-offset: 3px;
+}
+
+  </style>
+</head>
+<body>
+
+<ul class="todo-list">
+  <li>
+    <input type="checkbox" id="task1">
+    <label for="task1">Learn HTML</label>
+    <ul class="sub-item">
+      <li>
+        <a class="sub-item-link" href="https://developer.mozilla.org" target="_blank">
+          HTML Docs
+        </a>
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <input type="checkbox" id="task2">
+    <label for="task2">Learn CSS</label>
+    <ul class="sub-item">
+      <li>
+        <a class="sub-item-link" href="https://css-tricks.com" target="_blank">
+          CSS Tricks
+        </a>
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <input type="checkbox" id="task3">
+    <label for="task3">Learn JS</label>
+    <ul class="sub-item">
+      <li>
+        <a class="sub-item-link" href="https://javascript.info" target="_blank">
+          JavaScript Info
+        </a>
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <input type="checkbox" id="task4">
+    <label for="task4">Build Projects</label>
+    <ul class="sub-item">
+      <li>
+        <a class="sub-item-link" href="https://freecodecamp.org" target="_blank">
+          freeCodeCamp
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+</body>
+</html>
