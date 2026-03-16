@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Application</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+}
+
+input:first-of-type {
+  border-radius: 12px;
+}
+
+input:focus, textarea:focus {
+  border-color: #0077cc;
+}
+
+input:invalid, select:invalid, textarea:invalid {
+  border-color: red;
+}
+
+input:valid, select:valid, textarea:valid {
+  border-color: green;
+}
+
+.radio-group input[type="radio"]:checked {
+  box-shadow: 0 0 5px #0077cc;
+}
+
+.radio-group input[type="radio"]:checked + label {
+  color: #0077cc;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+button:hover {
+  background: #005fa3;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <form>
+    <label for="name">Full Name</label>
+    <input type="text" id="name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" required>
+
+    <label for="position">Position</label>
+    <select id="position" required>
+      <option value="">Select</option>
+      <option>Developer</option>
+      <option>Designer</option>
+    </select>
+
+    <fieldset class="radio-group">
+      <legend>Availability</legend>
+
+      <input type="radio" name="availability" id="full" required>
+      <label for="full">Full-Time</label>
+
+      <input type="radio" name="availability" id="part">
+      <label for="part">Part-Time</label>
+    </fieldset>
+
+    <label for="message">Message</label>
+    <textarea id="message"></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>
